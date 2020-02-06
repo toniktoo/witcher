@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <a href="" class="header__logo-link"><img src="./img/logo.svg" alt="witcher-logo"
+                        class="header__logo"></a>
+
+                <nav class="header__menu-list menu-list">
+                    <li class="header__munu-item"><a href="#" class="header__menu-link">Описание</a></li>
+                    <li class="header__munu-item"><a href="#" class="header__menu-link">Трейлер</a></li>
+                    <li class="header__munu-item"><a href="#" class="header__menu-link">Отзывы</a></li>
+                </nav>
+
+                <div class="social">
+                    <a href="#" class="social__link"><img src="./img/social/facebook.svg" alt="facebook-logo"
+                            class="social__img"></a>
+                    <a href="#" class="social__link"><img src="./img/social/instagram.svg" alt="instagram-logo"
+                            class="social__img"></a>
+                    <a href="#" class="social__link"><img src="./img/social/twitter.svg" alt="twitter-logo"
+                            class="social__img"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content">
+                <span class="content__subtitle">2019, фэнтези</span>
+                <div class="content__stars-container">
+                    <div class="content__star star"></div>
+                    <div class="content__star star"></div>
+                    <div class="content__star star"></div>
+                    <div class="content__star star"></div>
+                    <div class="content__star star"></div>
+                    <div class="content__star star"></div>
+                    <div class="content__star star"></div>
+                    <div class="content__star-eight star"></div>
+                    <div class="content__star-nine star"></div>
+                    <div class="content__star-ten star"></div>
+                </div>
+                <h1 class="content__title">Ведьмак</h1>
+                <p class="content__info">
+                    Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади по кличке Плотва путешествует
+                    по Континенту. За тугой мешочек чеканных монет этот мужчина избавит вас от всякой настырной
+                    нечисти — хоть от чудищ болотных, оборотней и даже заколдованных принцесс.
+                </p>
+                <button class="content__btn-look">Смотреть онлайн</button>
+
+                <div class="content__series-list">
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="content__series-item content__series-one">
+                                    <span class="content__series-subtitle">Серия #1</span>
+                                    <span class="content__series-title">« Начало конца »</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content__series-item content__series-two">
+                                    <span class="content__series-subtitle">Серия #2</span>
+                                    <span class="content__series-title">« Четыре знака »</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content__series-item content__series-three">
+                                    <span class="content__series-subtitle">Серия #3</span>
+                                    <span class="content__series-title">« Предательская луна »</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content__series-item content__series-four">
+                                    <span class="content__series-subtitle">Серия #4</span>
+                                    <span class="content__series-title">« Банкеты, ублюдки и похороны »</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="series__btn-next"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container footer__container">
+            <div class="footer">
+                <span class="footer__text-one">© 2020 The Witcher. All right reserved.</span>
+                <span class="footer__text-two">Privacy</span>
+                <span class="footer__text-three">Policy Terms of Service</span>
+                <span class="footer__text-four">Legal</span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script>
+        let swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.series__btn-next',
+            },
+            slidesPerView: 2,
+            loop: true,
+        });
+        if (document.documentElement.clientWidth < 420) {
+            let swiper = new Swiper('.swiper-container', {
+                navigation: {
+                    nextEl: '.series__btn-next',
+                },
+                slidesPerView: 1,
+                loop: true,
+            });
+        }
+    </script>
+</body>
+
+</html>
